@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import pupper from '../../../assets/img/pupper.jpeg';
+import icon from '../../../assets/img/user-icon.png';
 import styles from './DogCard.module.css';
 
 export interface IDogCard {
@@ -15,7 +17,7 @@ const DogCard: React.FC<IDogCard> = ({tag, title, body, author, time}) => {
     <div className={styles.card}>
       <div className={styles.card__header}>
         <Image 
-        src='https://wallpaperaccess.com/full/396901.jpg'
+        src={pupper}
         alt='card__image'
         className={styles.card__image}
         width='600'
@@ -30,7 +32,7 @@ const DogCard: React.FC<IDogCard> = ({tag, title, body, author, time}) => {
       <div className={styles.card__footer}>
         <div className={styles.user}>
           <Image 
-          src=''
+          src={icon}
           alt='user__image'
           className={styles.user__image}
           width="40"
